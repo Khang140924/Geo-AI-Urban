@@ -26,3 +26,36 @@ The system leverages AI for automatic issue classification and extracts GPS meta
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/Khang140924/Geo-AI-Urban.git](https://github.com/Khang140924/Geo-AI-Urban.git)
+Setup the Database:
+
+Import the provided .sql file into your MySQL server (e.g., using phpMyAdmin).
+
+Update database connection settings in the source code.
+
+Configure API Keys:
+
+Obtain a Google Gemini API Key and add it to api/analyze_image.php.
+
+Obtain Google OAuth Client ID & Secret and configure them in login_google_action.php.
+
+Note: Never hardcode or commit real API keys to a public repository.
+
+Run the Application:
+
+Host the project on a local server (like XAMPP, WAMP) or a live web server.
+
+💡 How It Works
+The user captures or uploads an image of an urban issue.
+
+The front-end temporarily locks the submission and sends the image to the PHP backend via AJAX.
+
+The backend communicates with the Google Gemini API, providing a strict prompt to classify the image into predefined database IDs.
+
+Concurrently, EXIF.js reads the image metadata to extract GPS coordinates and updates the map.
+
+The UI dynamically updates with the suggested category and location, allowing the user to submit the report with a single click.
+
+👨‍💻 Author
+Nguyen Lam Khang
+
+Full-stack Web Development
