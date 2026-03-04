@@ -1,0 +1,1245 @@
+/* ---- 1. TỔNG THỂ ---- */
+body {
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font chữ hiện đại */
+    color: #333; 
+    background-color: #f0f2f5 !important;
+}
+
+/* ---- 2. THANH NAVBAR (ĐÃ ĐỔI LẠI SANG MÀU TEAL) ---- */
+.navbar {
+    background-color: #00A78E !important; /* Nền TEAL */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Tăng bóng đổ nhẹ */
+    position: sticky;
+    top: 0;
+    z-index: 1040;
+}
+.navbar .navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700; 
+}
+.navbar .nav-link,
+.navbar .dropdown-toggle {
+    color: #ffffff !important;
+    font-weight: 500; 
+}
+.navbar .navbar-brand:hover,
+.navbar .nav-link:hover {
+    color: #e0e0e0 !important;
+}
+.navbar .btn.btn-outline-light {
+    border-color: #ffffff; 
+    color: #ffffff !important; 
+    background-color: transparent;
+    transition: all 0.3s ease; 
+}
+.navbar .btn.btn-outline-light:hover {
+    background-color: #ffffff; 
+    color: #00A78E !important; 
+}
+
+/* ---- 3. BỐ CỤC 3 CỘT ---- */
+.main-layout {
+    margin-top: 1.5rem;
+}
+.sidebar-left, .sidebar-right {
+    position: sticky;
+    top: 72px; 
+    height: calc(100vh - 72px);
+    overflow-y: auto;
+    padding-bottom: 20px; 
+}
+
+/* ---- 4. SIDEBAR TRÁI (THEME TEAL & VÀNG) ---- */
+.nav-sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    color: #333; 
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease; 
+}
+.nav-sidebar .nav-link i {
+    font-size: 1.25rem;
+    width: 32px;
+    text-align: center;
+    margin-right: 12px;
+    color: #00A78E;
+}
+.nav-sidebar .nav-link:hover {
+    background-color: #e6f6f4; 
+    color: #00A78E; 
+    transform: translateX(5px); 
+}
+.nav-sidebar .nav-link.active {
+    background-color: #e6f6f4; 
+    color: #00A78E; 
+    font-weight: 600; 
+}
+.nav-sidebar .nav-link.admin-link {
+    color: #c79100 !important;
+    font-weight: 600;
+}
+.nav-sidebar .nav-link.admin-link i {
+    color: #c79100 !important;
+}
+.nav-sidebar .nav-link.chatbot-link {
+    color: #00A78E; 
+    font-weight: 600;
+}
+.nav-sidebar .nav-link.chatbot-link i {
+    color: #00A78E;
+}
+.nav-sidebar .nav-link.chatbot-link:hover {
+    background-color: #e6f6f4; 
+    transform: translateX(5px);
+}
+
+/* ---- 5. SIDEBAR PHẢI (WIDGET/BẢN ĐỒ) (THEME TEAL) ---- */
+.widget-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Tăng bóng đổ nhẹ */
+    margin-bottom: 1.5rem; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hiệu ứng hover */
+}
+.widget-card:hover {
+    transform: translateY(-3px); /* Nhấc nhẹ card lên */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Bóng đổ rõ hơn */
+}
+.widget-card h5 {
+    font-weight: 700; /* Đậm hơn */
+    border-bottom: 1px solid #eee; /* Đường kẻ nhạt hơn */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #00A78E; 
+}
+.widget-card .btn-chatbot {
+    background-color: #00A78E !important;
+    border-color: #00A78E !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 167, 142, 0.3); 
+}
+.widget-card .btn-chatbot:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 167, 142, 0.4);
+}
+.widget-card .text-chatbot {
+    color: #00A78E !important;
+    font-weight: 700 !important; 
+}
+#map-summary { 
+    height: 250px;
+    width: 100%; 
+    border-radius: 8px; 
+    border: 1px solid #ddd; 
+    background-color: #e0e0e0;
+}
+
+/* ---- 6. CARD BÁO CÁO (FEED CHÍNH) (THEME VÀNG) ---- */
+.report-card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Tăng bóng đổ nhẹ */
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hiệu ứng hover */
+}
+.report-card:hover {
+    transform: translateY(-3px); /* Nhấc nhẹ card lên */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Bóng đổ rõ hơn */
+}
+.card-user-info {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+}
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-color: #e4e6eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #333;
+    overflow: hidden; /* <-- SỬA LỖI AVATAR (1) */
+}
+
+/* CSS cho ảnh avatar BÊN TRONG .user-avatar (FIX LỖI PHÓNG TO) */
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* <-- SỬA LỖI AVATAR (2) */
+}
+
+.user-name-time {
+    display: flex;
+    flex-direction: column;
+}
+.user-name-time .user-name {
+    font-weight: 700; /* Đậm hơn */
+    color: #050505;
+}
+.user-name-time .post-time {
+    font-size: 0.85rem;
+    color: #65676b;
+}
+.card-content {
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+.card-content .report-description {
+    color: #050505;
+    margin-bottom: 1rem;
+    font-size: 1rem; /* Giảm nhẹ cỡ chữ mô tả */
+    line-height: 1.5; /* Tăng khoảng cách dòng */
+}
+.card-content .report-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Vẫn giữ bo góc ảnh */
+    border: 1px solid #ddd;
+    object-fit: cover;
+}
+.report-stats {
+    padding: 0.75rem 1rem;
+    color: #65676b;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee; /* Đường kẻ nhạt hơn */
+    display: flex;
+    align-items: center;
+}
+.report-stats i {
+    color: #00A78E !important;
+    margin-right: 5px;
+}
+.report-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.25rem 0.5rem;
+}
+.action-button {
+    flex: 1;
+    padding: 0.6rem; /* Tăng padding nút */
+    text-align: center;
+    text-decoration: none;
+    color: #606770;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.2s;
+}
+.action-button:hover {
+    background-color: #f2f2f2;
+}
+.action-button i {
+    margin-right: 6px;
+}
+.action-button.liked {
+    color: #00A78E !important;
+    font-weight: 700;
+}
+
+/* ---- 7. GHI ĐÈ MÀU CHỦ ĐẠO (ĐỔI SANG TEAL) ---- */
+.btn-primary, .btn-success {
+    background-color: #00A78E !important;
+    border-color: #00A78E !important;
+    font-weight: 500; /* Nút đậm vừa phải */
+}
+.btn-primary:hover, .btn-success:hover {
+    background-color: #008f79 !important;
+    border-color: #008f79 !important;
+}
+.text-primary {
+    color: #00A78E !important;
+}
+.badge.bg-primary {
+    background-color: #00A78E !important;
+}
+
+/* Tiêu đề "Báo cáo mới nhất" */
+h3 {
+    color: #00A78E; 
+    font-weight: 700; /* Đậm hơn */
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+h3 i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* ---- 8. CSS SKELETON (Giữ nguyên) ---- */
+.create-report-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.create-report-box .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e4e6eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin-right: 12px;
+    overflow: hidden; /* <-- SỬA LỖI AVATAR (3) */
+}
+.create-report-input {
+    flex: 1;
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 20px;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    color: #65676b;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+.create-report-input:hover {
+    background-color: #e4e6eb;
+}
+.skeleton-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.25rem;
+}
+.skeleton-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.skeleton-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-color: #e0e0e0;
+}
+.skeleton-user {
+    flex: 1;
+}
+.skeleton-line {
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+.skeleton-line.w-50 { width: 50%; }
+.skeleton-line.w-75 { width: 75%; }
+.skeleton-content {
+    height: 250px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+.skeleton-avatar, .skeleton-line, .skeleton-content {
+    animation: shimmer 1.5s infinite linear;
+    background-image: linear-gradient(90deg, #e0e0e0 0px, #f0f0f0 40px, #e0e0e0 80px);
+    background-size: 600px;
+}
+@keyframes shimmer {
+    0% { background-position: -300px 0; }
+    100% { background-position: 300px 0; }
+}
+
+/* ---- 9. CSS BADGE (Đã sửa lỗi và dùng màu theme) ---- */
+.badge-status {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3em 0.5em;
+    border-radius: 0.375rem;
+}
+.badge-status-new {
+    color: #664d03;
+    background-color: #fff3cd; /* Vàng nhạt */
+}
+.badge-status-processing {
+    color: #00A78E;
+    background-color: #e6f6f4; /* Teal nhạt */
+}
+.badge-status-completed {
+    color: #146c43;
+    background-color: #d1e7dd; /* Xanh lá nhạt */
+}
+/* ---- 10. NÂNG CẤP SIDEBAR TRÁI ---- */
+
+/* CSS cho Profile Card (Đã sửa để giống Facebook) */
+.sidebar-profile-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem; /* Reduced margin-bottom */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s ease;
+}
+.sidebar-profile-card:hover {
+    background-color: #f2f2f2;
+}
+
+.sidebar-profile-card .user-avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-color: #e4e6eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #333;
+    overflow: hidden;
+}
+.sidebar-profile-card .user-avatar-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sidebar-profile-card .user-fullname-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-grow: 1;
+}
+.sidebar-profile-card .user-fullname {
+    font-weight: 600;
+    color: #050505;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+.sidebar-profile-card .view-profile-link {
+    font-size: 0.8rem;
+    color: #65676b;
+    text-decoration: none;
+    line-height: 1.2;
+}
+.sidebar-profile-card .view-profile-link:hover {
+    text-decoration: underline;
+    color: #00A78E;
+}
+
+/* CSS cho Heading (Lọc, Lối tắt) */
+.sidebar-heading {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    font-weight: 700;
+    margin-top: 0.75rem; /* Slightly reduced margin-top */
+    color: #6c757d;
+    padding-left: 1rem; /* Added padding to align with links */
+    margin-bottom: 0.5rem; /* Added margin-bottom */
+}
+
+/* Tăng nhẹ font chữ và icon cho dễ nhìn */
+.nav-sidebar .nav-link {
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem; /* Slightly reduced padding */
+    margin-bottom: 0.25rem; /* Reduced margin-bottom */
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #333;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+ .nav-sidebar .nav-link i.fa-fw {
+    text-align: center;
+    font-size: 1.25rem;
+    width: 32px;
+    margin-right: 12px;
+    color: #00A78E;
+}
+.nav-sidebar .nav-link:hover {
+    background-color: #e6f6f4;
+    color: #00A78E;
+    transform: translateX(5px);
+}
+.nav-sidebar .nav-link.active {
+    background-color: #e6f6f4;
+    color: #00A78E;
+    font-weight: 600;
+}
+/* Link Admin trong sidebar (Màu VÀNG) */
+.nav-sidebar .nav-link.admin-link {
+    color: #c79100 !important;
+    font-weight: 600;
+}
+.nav-sidebar .nav-link.admin-link i {
+    color: #c79100 !important;
+}
+/* Link Chatbot trong Sidebar (Màu Teal) */
+.nav-sidebar .nav-link.chatbot-link {
+    color: #00A78E;
+    font-weight: 600;
+}
+.nav-sidebar .nav-link.chatbot-link i {
+    color: #00A78E;
+}
+.nav-sidebar .nav-link.chatbot-link:hover {
+    background-color: #e6f6f4;
+    transform: translateX(5px);
+}
+
+
+/* Style riêng cho link lọc danh mục */
+.category-filter-link i {
+    color: #6c757d;
+    opacity: 0.8;
+}
+.category-filter-link:hover i {
+    color: #00A78E;
+    opacity: 1;
+}
+/* ---- 11. NÂNG CẤP TRANG ĐĂNG NHẬP ---- */
+
+.login-page {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    /* background: linear-gradient(135deg, #e6f6f4 0%, #f0f2f5 100%); /* Subtle Teal gradient */
+    background-color: #f0f2f5; /* Keep the light grey background */
+    padding: 2rem 0; /* Add padding for smaller screens */
+}
+
+.login-container {
+    max-width: 420px; /* Slightly wider */
+    width: 100%;
+}
+
+.login-card {
+    background-color: #ffffff;
+    border-radius: 12px; /* More rounded corners */
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    overflow: hidden; /* Ensure content respects border radius */
+}
+
+.login-card-body {
+    padding: 2.5rem; /* Increase padding */
+}
+
+.login-logo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00A78E; /* Logo color Teal */
+}
+.login-logo i {
+    margin-right: 8px;
+}
+
+.login-card h3 {
+    color: #333; /* Darker heading color */
+    font-weight: 600; /* Slightly bolder */
+    margin-bottom: 2rem; /* More space below heading */
+}
+
+.login-card .form-control {
+    border-radius: 6px; /* Slightly rounded inputs */
+    padding: 0.8rem 1rem; /* Adjust input padding */
+    border: 1px solid #ced4da;
+}
+.login-card .form-control:focus {
+    border-color: #00A78E;
+    box-shadow: 0 0 0 0.2rem rgba(0, 167, 142, 0.25); /* Teal focus glow */
+}
+
+.login-card .btn-primary {
+    padding: 0.8rem; /* Match input padding */
+    font-weight: 600; /* Bolder button text */
+    border-radius: 6px;
+    margin-top: 1rem; /* Space above button */
+    /* Uses the Teal color defined in section 7 */
+}
+
+.login-card hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-card .register-link a {
+    color: #00A78E; /* Teal link color */
+    font-weight: 500;
+    text-decoration: none;
+}
+.login-card .register-link a:hover {
+    text-decoration: underline;
+}
+/* ---- 12. NÂNG CẤP MODAL GỬI BÁO CÁO ---- */
+
+#reportModal .modal-body {
+    padding: 1.5rem; /* Tăng padding tổng thể */
+}
+
+/* Cột tải ảnh */
+.image-upload-col {
+    padding-right: 1.5rem;
+    border-right: 1px solid #eee; /* Đường kẻ ngăn cách */
+}
+.image-preview-container {
+    width: 100%;
+    height: 250px; /* Chiều cao cố định cho khung xem trước */
+    background-color: #f8f9fa; /* Màu nền nhẹ */
+    border: 2px dashed #ced4da; /* Viền đứt nét */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #6c757d;
+    cursor: pointer; /* Cho phép bấm vào để chọn file */
+    margin-bottom: 1rem;
+    position: relative; /* Để chứa ảnh preview */
+    overflow: hidden; /* Ẩn phần ảnh thừa */
+}
+.image-preview-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Hiển thị ảnh đẹp hơn */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.image-preview-placeholder {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.image-preview-placeholder i {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+/* Ẩn input file gốc */
+#report_image_input {
+    display: none;
+}
+/* Style cho nút chọn file thay thế (nếu cần) */
+.btn-upload-alt {
+    width: 100%;
+}
+
+
+/* Cột thông tin */
+.report-info-col {
+    padding-left: 1.5rem;
+}
+
+#map-picker {
+    height: 200px; /* Giảm chiều cao bản đồ */
+    margin-top: 0.5rem;
+}
+/* ---- 13. NÂNG CẤP BÌNH LUẬN (PHIÊN BẢN SẠCH) ---- */
+
+/* A. Phần danh sách bình luận (Bong bóng chat) */
+.comment-section {
+    display: none; /* Ẩn mặc định để trượt xuống */
+    background-color: #f8f9fa; /* Nền hơi xám nhạt */
+    padding: 1rem 1.25rem;
+    border-top: 1px solid #eee;
+}
+.comment-list {
+    max-height: 250px; 
+    overflow-y: auto;
+    margin-bottom: 0;
+    padding-right: 5px; 
+}
+/* Scrollbar Style */
+.comment-list::-webkit-scrollbar { width: 6px; }
+.comment-list::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+.comment-list::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+.comment-list::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* Một mục bình luận */
+.comment-item {
+    display: flex;
+    margin-bottom: 0.75rem; 
+    align-items: flex-start; 
+}
+/* Avatar của người bình luận */
+.comment-avatar {
+    width: 36px; 
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e4e6eb; /* Xám nhạt */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem; 
+    color: #333; /* Icon màu đậm */
+    margin-right: 10px;
+    flex-shrink: 0; 
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1); 
+}
+/* Bong bóng chat */
+.comment-content {
+    background-color: #ffffff; 
+    padding: 0.6rem 0.9rem; 
+    border-radius: 18px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); 
+    max-width: calc(100% - 46px); 
+    word-wrap: break-word; 
+}
+.comment-user-name {
+    font-weight: 600;
+    font-size: 0.88rem; 
+    color: #333; 
+    display: block; 
+    margin-bottom: 2px; 
+}
+.comment-text {
+    font-size: 0.9rem; 
+    line-height: 1.3; 
+    color: #222; 
+}
+
+/* B. Phần khung nhập liệu (ĐÃ SỬA MÀU VÀ AVATAR) */
+.comment-section-input {
+    background-color: #ffffff; 
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #eee;
+    border-bottom-left-radius: 8px; /* Bo góc dưới cho card */
+    border-bottom-right-radius: 8px;
+}
+
+.comment-input-form {
+    display: flex;
+    align-items: center;
+}
+
+/* Avatar CỦA BẠN (người đang gõ) */
+.comment-input-form .current-user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #e4e6eb; /* Nền xám nhạt */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #333;
+    flex-shrink: 0;
+    overflow: hidden; 
+}
+.comment-input-form .current-user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Khung gõ chữ */
+.comment-input-form .form-control {
+    border-radius: 20px !important;
+    background-color: #f0f2f5 !important; /* Nền xám giống Facebook */
+    border: none !important;
+    flex-grow: 1;
+    margin-right: 10px;
+    height: 38px; 
+    padding: 0.5rem 1rem;
+    box-shadow: none !important; 
+}
+
+/* Khung gõ chữ khi focus (MÀU TEAL) */
+.comment-input-form .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 167, 142, 0.25) !important; 
+    border-color: #00A78E !important; 
+    background-color: #ffffff !important; 
+}
+
+/* Nút gửi (MÀU TEAL) */
+.comment-input-form .btn-send-comment {
+    border-radius: 50% !important;
+    width: 38px; 
+    height: 38px;
+    padding: 0 !important;
+    font-size: 1.1rem; 
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00A78E !important; /* MÀU TEAL */
+    border-color: #00A78E !important; /* MÀU TEAL */
+    transition: background-color 0.2s ease;
+}
+.comment-input-form .btn-send-comment:hover {
+    background-color: #008f79 !important; /* TEAL ĐẬM */
+    border-color: #008f79 !important; /* TEAL ĐẬM */
+}
+.comment-input-form .btn-send-comment:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+/* ---- 14. BỔ SUNG ĐỂ HOÀN THIỆN KHUNG BÌNH LUẬN ---- */
+
+/* Đây là phần khung bao bọc input, tách biệt với danh sách bình luận */
+.comment-section-input {
+    background-color: #ffffff; /* Nền trắng (khác với nền xám của danh sách) */
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #eee;
+    border-bottom-left-radius: 8px; /* Bo góc dưới cho đẹp */
+    border-bottom-right-radius: 8px;
+}
+
+/* Style cho avatar của CHÍNH MÌNH (lấy từ style "create-report-box") */
+.comment-input-form .current-user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e4e6eb; /* Nền xám nhạt */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #333;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+.comment-input-form .current-user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Chỉnh lại input trong Section 13 cho cao bằng avatar */
+.comment-input-form .form-control {
+    height: 38px; /* Cập nhật chiều cao */
+    background-color: #f0f2f5; /* Đổi nền sang xám (giống Facebook) */
+    box-shadow: none; /* Bỏ shadow bên trong */
+}
+.comment-input-form .form-control:focus {
+    background-color: #ffffff; /* Trắng khi focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 167, 142, 0.25); /* Focus màu TEAL */
+    border-color: #00A78E;
+}
+
+
+/* GHI ĐÈ NÚT GỬI (Section 13) TỪ XANH LÁ SANG MÀU TEAL */
+.comment-input-form .btn-send-comment {
+    width: 38px;
+    height: 38px;
+    background-color: #00A78E !important; /* Màu TEAL chủ đạo */
+    border-color: #00A78E !important;
+}
+.comment-input-form .btn-send-comment:hover {
+    background-color: #008f79 !important; /* TEAL đậm */
+    border-color: #008f79 !important;
+}
+/* ---- 15. NÂNG CẤP TRANG PROFILE VÀ UPLOAD AVATAR ---- */
+/* (Code này sẽ SỬA LỖI ảnh bị vỡ) */
+
+/* 1. Card thông tin chung (Gộp 2 card cũ) */
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+/* 2. Khung chứa avatar và nút upload (QUAN TRỌNG) */
+.avatar-upload-container {
+    position: relative;
+    width: 150px; /* SÉT KÍCH THƯỚC CỐ ĐỊNH 150px */
+    height: 150px;
+    margin: 0 auto 1.5rem auto; /* Căn giữa */
+}
+
+/* 3. Ảnh đại diện (QUAN TRỌNG) */
+.profile-avatar-large {
+    width: 100%;    /* 100% của 150px (khung ở trên) */
+    height: 100%; /* 100% của 150px (khung ở trên) */
+    border-radius: 50%; /* Bo tròn */
+    object-fit: cover; /* Chống méo ảnh */
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* 4. Nút "Đổi ảnh" (icon camera) */
+.avatar-edit-button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #00A78E; /* Màu Teal chủ đạo */
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+.avatar-edit-button:hover {
+    background-color: #008f79; /* Teal đậm */
+    transform: scale(1.1);
+}
+
+/* 5. Input file (ẩn đi) */
+#avatar-upload-input {
+    display: none;
+}
+
+/* 7. Thống kê (nằm trong card) */
+.profile-card hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.profile-card h5 {
+    font-weight: 600;
+    color: #00A78E; /* Màu Teal */
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.profile-card .list-group-item {
+    border: none; /* Bỏ viền của list-group */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 8. Modal xem trước ảnh */
+#avatar-preview-img {
+    display: block;
+    max-width: 100%;
+    max-height: 400px; /* Giới hạn chiều cao xem trước */
+    margin: 1rem auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+/* ---- 16. BỔ SUNG AVATAR CHO NAVBAR ---- */
+
+.nav-avatar-img {
+    width: 32px;    /* Kích thước ảnh nhỏ */
+    height: 32px;
+    border-radius: 50%; /* Làm tròn ảnh */
+    object-fit: cover;    /* Chống méo ảnh */
+    border: 1px solid #777; /* Thêm viền mỏng */
+}
+/* --- CSS TÙY CHỈNH CHO PROFILE CARD --- */
+/* 1. Class bọc mới (ĐÃ SỬ DỤNG FLEXBOX ĐỂ CĂN GIỮA TUYỆT ĐỐI) */
+.profile-text-details {
+    display: flex;          /* Bật Flexbox */
+    flex-direction: column; /* Xếp các mục theo chiều dọc */
+    align-items: center;    /* Căn giữa tất cả các mục theo chiều ngang */
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+/* 2. Tùy chỉnh Tên (to, rõ) */
+.profile-text-details .user-name {
+    /* *** SỬA Ở ĐÂY: THÊM !important *** */
+    text-align: center !important; 
+    
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #212529;
+    letter-spacing: -0.5px;
+}
+
+/* 3. Tùy chỉnh Email (nhỏ, mờ) */
+.profile-text-details .user-email {
+    /* *** SỬA Ở ĐÂY: THÊM !important *** */
+    text-align: center !important; 
+    
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+/* 4. BIẾN "VAI TRÒ" THÀNH BADGE (Nhãn) */
+.profile-text-details .user-role {
+    display: inline-block; 
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.3rem 0.8rem; 
+    background-color: #e9ecef; 
+    color: #495057;
+    border-radius: 50rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 5. Tùy chỉnh nút (đã thêm w-100 trong HTML) */
+.profile-text-details .btn {
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+/* ---- CSS CHO TRANG MAP.PHP ---- */
+#main-map-container {
+    /* Lấy chiều cao của màn hình trừ đi chiều cao navbar (khoảng 56px-72px) */
+    height: calc(100vh - 72px); 
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* ---- 17. CSS SỬA LỖI THANH TÌM KIẾM LEAFLET ---- */
+.leaflet-geosearch-bar {
+    z-index: 1000 !important; /* Đảm bảo nó nằm trên bản đồ */
+    max-width: 250px !important;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.leaflet-geosearch-bar form input {
+    height: 40px !important;
+    padding: 0 15px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+}
+.leaflet-geosearch-bar .results.active {
+     border-radius: 4px !important;
+     border: 1px solid #ccc !important;
+     margin-top: 5px;
+}
+.leaflet-geosearch-bar .results > * {
+    padding: 8px 15px !important;
+}
+/* ---- 18. CSS CHO CHATBOT ---- */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px; /* Chiều rộng cửa sổ chat */
+    height: 500px; /* Chiều cao cửa sổ chat */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1090;
+    display: none; /* Mặc định ẩn */
+    flex-direction: column; /* Chia header, body, input */
+    overflow: hidden;
+}
+
+.chatbot-header {
+    background-color: #00A78E; /* Màu Teal chủ đạo */
+    color: white;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.chatbot-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%); /* Đổi màu nút close thành trắng */
+}
+
+.chatbot-body {
+    flex-grow: 1; /* Chiếm hết phần còn lại */
+    padding: 1rem;
+    overflow-y: auto; /* Tự cuộn khi nhiều tin nhắn */
+    background-color: #f8f9fa; /* Nền xám nhạt */
+}
+
+/* Dùng lại style của bình luận */
+.chatbot-body .chat-message {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: flex-start; 
+}
+/* Tin nhắn của Bot */
+.chatbot-body .chat-message.bot .comment-avatar {
+    background-color: #e6f6f4; /* Nền avatar Teal nhạt */
+    color: #00A78E;
+}
+.chatbot-body .chat-message.bot .comment-content {
+    background-color: #ffffff; /* Nền bong bóng trắng */
+    border: 1px solid #eee;
+}
+/* Tin nhắn của User */
+.chatbot-body .chat-message.user {
+    justify-content: flex-end; /* Đẩy tin nhắn user sang phải */
+}
+.chatbot-body .chat-message.user .comment-avatar {
+    order: 2; /* Đổi vị trí avatar */
+    margin-right: 0;
+    margin-left: 10px;
+}
+.chatbot-body .chat-message.user .comment-content {
+    order: 1; /* Đổi vị trí bong bóng chat */
+    background-color: #00A78E; /* Nền bong bóng màu Teal */
+    color: white;
+}
+.chatbot-body .chat-message.user .comment-user-name {
+    color: #f0f0f0; /* Tên user màu sáng */
+}
+.chatbot-body .chat-message.user .comment-text {
+    color: white;
+}
+/* Tin nhắn "đang gõ..." */
+.chatbot-body .chat-message.typing {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.chatbot-input-form {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+.chatbot-input-form .form-control {
+    border-radius: 20px;
+    background-color: #f0f2f5;
+    border: none;
+    flex-grow: 1;
+    margin-right: 10px;
+    height: 38px; 
+    padding: 0.5rem 1rem;
+}
+.chatbot-input-form .btn-send-comment {
+    border-radius: 50%;
+    width: 38px; 
+    height: 38px;
+    padding: 0;
+    font-size: 1.1rem; 
+    flex-shrink: 0;
+}
+/* --- BẮT ĐẦU: CSS CHO CHATBOT (THÊM MỚI/CẬP NHẬT) --- */
+.chatbot-input-form {
+    display: flex;
+    align-items: flex-end; /* Đảm bảo các phần tử thẳng hàng ở dưới cùng */
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    position: relative; /* Quan trọng cho việc định vị ảnh preview */
+}
+
+.chatbot-input-form .form-control {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.chatbot-input-form .btn {
+    flex-shrink: 0;
+}
+
+/* Thêm vào để bố cục nút upload và input chat */
+.chatbot-input-form #chatbot-upload-image-btn {
+    height: 38px; /* Giữ cùng chiều cao với input */
+    margin-right: 5px; /* Khoảng cách với input */
+}
+
+/* Khu vực hiển thị ảnh đã chọn */
+.image-preview-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Khoảng cách với input bên dưới */
+    position: absolute; /* Đặt ở vị trí cố định trên input */
+    bottom: 55px; /* Khoảng cách từ dưới lên */
+    left: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10; /* Đảm bảo nó nằm trên các thành phần khác */
+}
+
+.image-preview-area img {
+    border-radius: 4px;
+}
+
+.image-preview-area .remove-image-btn {
+    position: absolute;
+    top: -8px; /* Đẩy lên trên góc */
+    right: -8px; /* Đẩy ra ngoài góc */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    padding: 0;
+    line-height: 1; /* Căn giữa icon */
+}
+
+/* Cập nhật kiểu cho tin nhắn của bot để đỡ tràn ảnh */
+.chat-message .comment-text img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: block; /* Để ảnh không bị ảnh hưởng bởi text bên cạnh */
+}
+
+/* --- KẾT THÚC: CSS CHO CHATBOT --- */
+/* === CSS CHO THÔNG BÁO === */
+#notification-list {
+    max-height: 400px; /* Chiều cao tối đa, có thanh cuộn */
+    overflow-y: auto;
+    padding: 0;
+}
+
+.notification-item {
+    white-space: normal !important; /* Cho phép thông báo xuống dòng */
+    width: 350px; /* Giới hạn chiều rộng của dropdown */
+    max-width: 90vw;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.notification-item:last-child {
+    border-bottom: 0;
+}
+
+.notification-item small {
+    display: block !important;
+}
+
+/* Màu nền cho thông báo chưa đọc */
+.notification-unread {
+    background-color: #f8f9fa; /* Một màu xám rất nhạt */
+}
+/* --- CODE HIỆN CHATBOT TRÊN DI ĐỘNG --- */
+@media (max-width: 768px) {
+    /* 1. Bắt buộc hiện nút chatbot */
+    .chatbot-toggler, .chatbot-btn, #chatbot-btn { 
+        display: flex !important; /* Hoặc block */
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: fixed !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        z-index: 9999 !important; /* Cho nó nổi lên trên cùng */
+    }
+
+    /* 2. Chỉnh lại kích thước khung chat khi mở ra cho vừa màn hình điện thoại */
+    .chatbot-body, .chat-popup {
+        width: 90% !important;
+        right: 5% !important;
+        bottom: 80px !important;
+        height: 70vh !important; /* Chiếm 70% chiều cao màn hình */
+    }
+}
